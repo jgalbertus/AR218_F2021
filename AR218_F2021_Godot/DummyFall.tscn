@@ -10,6 +10,7 @@ extents = Vector2( 250, 75 )
 extents = Vector2( 32.9552, 31.1362 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 475.947, 348.131 )
