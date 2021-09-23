@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Walk3.png-53b65f564e064a374d5ba0021e43c9d3.stex"
+path="res://.import/Crouch.png-ebea20304ee9bedc2427df4e0fbf7045.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JeffreySprites/Walk3.png"
-dest_files=[ "res://.import/Walk3.png-53b65f564e064a374d5ba0021e43c9d3.stex" ]
+source_file="res://Sprites/JeffreySprites/Crouch.png"
+dest_files=[ "res://.import/Crouch.png-ebea20304ee9bedc2427df4e0fbf7045.stex" ]
 
 [params]
 

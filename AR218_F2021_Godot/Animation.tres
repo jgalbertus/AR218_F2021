@@ -1,13 +1,14 @@
 [gd_resource type="SpriteFrames" load_steps=9 format=2]
 
-[ext_resource path="res://JeffreySprites/Walk3.png" type="Texture" id=1]
-[ext_resource path="res://JeffreySprites/Walk1.png" type="Texture" id=2]
-[ext_resource path="res://JeffreySprites/Idle.png" type="Texture" id=3]
-[ext_resource path="res://JeffreySprites/Climb2.png" type="Texture" id=4]
-[ext_resource path="res://JeffreySprites/Climb1.png" type="Texture" id=5]
-[ext_resource path="res://JeffreySprites/Crouch.png" type="Texture" id=6]
-[ext_resource path="res://JeffreySprites/Walk4.png" type="Texture" id=7]
-[ext_resource path="res://JeffreySprites/Air.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/JeffreySprites/Walk3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/JeffreySprites/Walk1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/JeffreySprites/Idle.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/JeffreySprites/Climb2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/JeffreySprites/Climb1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/JeffreySprites/Crouch.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/JeffreySprites/Walk4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/JeffreySprites/Air.png" type="Texture" id=8]
+
 
 [resource]
 animations = [ {
