@@ -26,7 +26,7 @@ func _physics_process(delta):
 	#velocity.y = 30
 	
 	velocity.y += GRAVITY
-	
+	print(velocity)
 	#ctrl click brings up documentation.  Look at what move and slide returns.  The up is necessary for is on floor.
 	velocity = move_and_slide(velocity, Vector2.UP)
 	

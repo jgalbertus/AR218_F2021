@@ -1,28 +1,71 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Platform2_Easel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Collectable.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1604.79, 10 )
 
 [node name="Level1" type="Node2D"]
 
-[node name="Platform1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 47.5683, 286.599 )
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="Platform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 47.5683, 286.599 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 736.832, 835.61 )
+shape = SubResource( 1 )
 
-[node name="Platform3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 47.5683, 286.599 )
+[node name="Platform2_Easel" parent="." instance=ExtResource( 2 )]
+position = Vector2( -22.4493, 563.476 )
+scale = Vector2( 3.17916, 3.17916 )
 
-[node name="Platform4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 338.924, 271.139 )
+[node name="Platform2_Easel2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -22.4493, 563.476 )
+scale = Vector2( 3.17916, 3.17916 )
 
-[node name="Platform5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 573.198, 268.761 )
-scale = Vector2( 5, 5 )
+[node name="Platform2_Easel3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -22.4493, 563.476 )
+scale = Vector2( 3.17916, 3.17916 )
 
-[node name="Platform6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 186.706, 220.003 )
+[node name="Platform2_Easel4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 830.622, 361.433 )
+scale = Vector2( 3.17916, 3.17916 )
+
+[node name="Platform2_Easel7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1169.61, 594.905 )
+scale = Vector2( 3.17916, 3.17916 )
+
+[node name="Platform2_Easel8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1546.75, 424.291 )
+scale = Vector2( 3.17916, 3.17916 )
+
+[node name="Platform2_Easel5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 534.292, 498.373 )
+scale = Vector2( 3.17916, 3.17916 )
+
+[node name="Platform2_Easel6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 260.411, 657.763 )
+scale = Vector2( 3.17916, 3.17916 )
+
+[node name="Collectable" parent="." instance=ExtResource( 3 )]
+position = Vector2( 502.186, 423.785 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Collectable2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1129.39, 536.088 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Collectable3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1542.58, 364.455 )
+scale = Vector2( 0.2, 0.2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 177.015, 448.957 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+
+[connection signal="area_entered" from="Area2D" to="Player" method="_on_Area2D_area_entered"]

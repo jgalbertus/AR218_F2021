@@ -3,7 +3,6 @@
 [ext_resource path="res://Scenes/Player2.gd" type="Script" id=1]
 [ext_resource path="res://Animation.tres" type="SpriteFrames" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 31.2734
 height = 108.603
