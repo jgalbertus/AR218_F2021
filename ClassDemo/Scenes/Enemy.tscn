@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://PlayerSprites/Walk2.png" type="Texture" id=1]
+[ext_resource path="res://PlayerSprites/Climb1.png" type="Texture" id=2]
+[ext_resource path="res://PlayerSprites/Air.png" type="Texture" id=3]
+[ext_resource path="res://PlayerSprites/Crouch.png" type="Texture" id=4]
+[ext_resource path="res://PlayerSprites/Walk4.png" type="Texture" id=5]
+[ext_resource path="res://PlayerSprites/Walk1.png" type="Texture" id=6]
+[ext_resource path="res://PlayerSprites/Climb2.png" type="Texture" id=7]
+[ext_resource path="res://PlayerSprites/Idle.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 23.1959
+height = 174.915
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_mask = 31
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.0470588, 0, 0, 0.341176 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.471954, 9.43873 )
+shape = SubResource( 2 )
+
+[node name="ground_check" type="RayCast2D" parent="."]
+position = Vector2( 28.9542, 69.9355 )
+enabled = true
