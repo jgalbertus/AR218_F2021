@@ -38,6 +38,10 @@ radius = 251.633
 
 [node name="Collectable" type="Area2D"]
 collision_layer = 8
+<<<<<<< HEAD
+=======
+collision_mask = 2
+>>>>>>> 5ab07b612664ada89e3af9c53302f0443be94c19
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -54,4 +58,7 @@ shape = SubResource( 3 )
 
 [connection signal="area_entered" from="." to="." method="_on_Collectable_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Collectable_body_entered"]
+<<<<<<< HEAD
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+=======
+>>>>>>> 5ab07b612664ada89e3af9c53302f0443be94c19
