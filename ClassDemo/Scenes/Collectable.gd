@@ -34,18 +34,3 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		#remember, queue_free() deletes this object from our game!
 		queue_free()
 	
-
-
-<<<<<<< HEAD
-=======
-func _on_Collectable_area_entered(area):
-	queue_free()
-	print ("entered")
-	pass # Replace with function body.
-
-
-func _on_Collectable_body_entered(body):
-	queue_free()
-	print ("b_entered")
-	pass # Replace with function body.
->>>>>>> 5ab07b612664ada89e3af9c53302f0443be94c19
