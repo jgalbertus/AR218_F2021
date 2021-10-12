@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Platform2_Easel.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Collectable.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Fonts/Gidole-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Scenes/ScoreLabel.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 3
@@ -34,7 +35,7 @@ position = Vector2( 253.015, 555.921 )
 scale = Vector2( 5, 5 )
 
 [node name="Platform2_Easel2" parent="Platforms" instance=ExtResource( 2 )]
-position = Vector2( 563.048, 766.173 )
+position = Vector2( 621.847, 748.355 )
 scale = Vector2( 5, 5 )
 
 [node name="Platform2_Easel3" parent="Platforms" instance=ExtResource( 2 )]
@@ -46,6 +47,7 @@ position = Vector2( 1635.69, 584.429 )
 scale = Vector2( 5, 5 )
 
 [node name="Collectables" type="Node2D" parent="."]
+visible = false
 
 [node name="Collectable" parent="Collectables" instance=ExtResource( 5 )]
 position = Vector2( 550.575, 561.266 )
@@ -99,6 +101,12 @@ smoothing_enabled = true
 [node name="Fallzone" type="CollisionShape2D" parent="Fallzone"]
 position = Vector2( 972.861, 1510.96 )
 shape = SubResource( 2 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 581.511, 598.354 )
+speed = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
