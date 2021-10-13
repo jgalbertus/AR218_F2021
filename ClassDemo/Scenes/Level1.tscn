@@ -106,7 +106,6 @@ shape = SubResource( 2 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 581.511, 598.354 )
-speed = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
