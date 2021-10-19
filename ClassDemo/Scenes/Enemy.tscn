@@ -22,14 +22,14 @@ animations = [ {
 "name": "climb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -54,7 +54,7 @@ script = ExtResource( 9 )
 modulate = Color( 0.0470588, 0, 0, 0.341176 )
 frames = SubResource( 1 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true

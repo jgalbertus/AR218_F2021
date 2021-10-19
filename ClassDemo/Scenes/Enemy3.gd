@@ -16,6 +16,10 @@ func _ready():
 		$ground_check.enabled = false
 
 func _process(delta):
+	#if the timer is timing, then
+	if not $Fade_Timer.is_stopped():
+		#set the alpha channel to a percentage based on however much time is left
+		modulate.a = modulate.a * $Fade_Timer.time_left
 
 	if is_on_wall():
 		flip_enemy()
@@ -29,6 +33,8 @@ func _process(delta):
 	velocity.x = speed * direction
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+
 	
 func flip_enemy():
 	direction = direction * -1
@@ -53,9 +59,12 @@ func _on_player_checker_body_entered(body):
 		#Note that you have turn off both the KinematicBody that 
 		#this script is attached to and the Area2D node.
 		set_collision_layer_bit(5, false)
+		set_collision_mask_bit(0, false)
 		$player_checker.set_collision_layer_bit(5, false)
-		#also, turn off the collision player bit mask
-		#set_collision_mask_bit(0, false)
+		$player_checker.set_collision_mask_bit(0, false)
+		
+		#stop the enemy from moving
+		speed = 0
 			
 func _on_Fade_Timer_timeout():
 	#When the timer runs out, remove this node from the game
