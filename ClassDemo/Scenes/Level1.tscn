@@ -32,7 +32,7 @@ corner_radius_bottom_left = 20
 
 [node name="Platform2_Easel" parent="Platforms" instance=ExtResource( 2 )]
 position = Vector2( 253.015, 555.921 )
-scale = Vector2( 5, 5 )
+scale = Vector2( 2, 2 )
 
 [node name="Platform2_Easel2" parent="Platforms" instance=ExtResource( 2 )]
 position = Vector2( 621.847, 748.355 )
@@ -56,6 +56,7 @@ scale = Vector2( 0.270943, 0.270943 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.698039, 0.698039, 0.698039, 1 )
 motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 1536, 1536 )
 __meta__ = {
@@ -88,9 +89,11 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 206.688, 310.033 )
+position = Vector2( 224.347, 474.849 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2( 200, 100 )
 current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true

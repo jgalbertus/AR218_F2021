@@ -20,7 +20,8 @@ func _physics_process(delta):
 	#show with "pressed"
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y += jump
-		
+		#Remember, $finds the nodenamed, so yours needs to match.
+		$JumpSound.play()
 	if not is_on_floor():
 		$AnimatedSprite.play("air")
 
