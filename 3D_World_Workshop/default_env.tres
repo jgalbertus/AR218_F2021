@@ -1,0 +1,13 @@
+[gd_resource type="Environment" load_steps=3 format=2]
+
+[ext_resource path="res://PanoramicPhotos/ESO_-_Milky_Way.jpeg" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[resource]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_energy = 0.0
+fog_depth_begin = 0.0
+fog_depth_end = 20.0
